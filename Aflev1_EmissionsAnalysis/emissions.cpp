@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+const float crit=50.0;
+
 float yearAvgFunc()
 {
     float yearTot=0.0,monthVal=0.0;
@@ -44,7 +46,7 @@ int main()
     while (i < yrAvgs.size())     // this could be a function
     {
         cout << "Average for year " << i+1 << " is " << yrAvgs[i];
-        if (yrAvgs[i]>50)
+        if (yrAvgs[i]>crit)
             {cout << " - WARNING.";}
         else 
             {cout << " - OKAY.";}
